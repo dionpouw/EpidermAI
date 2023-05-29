@@ -1,36 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="8dp">
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/round_shape"
+    android:elevation="3dp">
 
-    <ImageView
-        android:contentDescription="@string/medicine_image"
-        android:id="@+id/medicine_image"
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/medicine_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/jakarta_sans_regular"
-        android:gravity="start"
-        android:paddingTop="8dp"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/medicine_image"
-        app:layout_constraintStart_toStartOf="@id/medicine_image"
-        app:layout_constraintTop_toBottomOf="@id/medicine_image"
-        tools:text="Amoxsan" />
+        <ImageView
+            android:id="@+id/medicine_image"
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:contentDescription="@string/medicine_item"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
 
+        <TextView
+            android:id="@+id/medicine_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorSecondaryContainer"
+            android:fontFamily="@font/jakarta_sans_regular"
+            android:gravity="start|center_vertical"
+            android:lines="2"
+            android:maxLines="2"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/medicine_image"
+            app:layout_constraintStart_toStartOf="@id/medicine_image"
+            app:layout_constraintTop_toBottomOf="@id/medicine_image"
+            tools:text="Amoxsan" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
