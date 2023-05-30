@@ -59,6 +59,9 @@
         <action
             android:id="@+id/action_homeFragment_to_diseaseFragment"
             app:destination="@id/diseaseFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/medicineDetailFragment"
@@ -99,4 +102,9 @@
             android:id="@+id/action_diseaseDetailFragment_to_diseaseGridFragment"
             app:destination="@id/diseaseGridFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.jeflette.epidermai.presentation.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>
