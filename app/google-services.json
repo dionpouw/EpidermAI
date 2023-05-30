@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "988293723555",
+    "project_id": "capstone-968d6",
+    "storage_bucket": "capstone-968d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988293723555:android:4bd94de4c5ce6a73a81616",
+        "android_client_info": {
+          "package_name": "com.jeflette.epidermai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988293723555-hvakh31bbqr1mb2cva3givuag12srbtf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jeflette.epidermai",
+            "certificate_hash": "0eb9fbb7b35098cae704dc9acd75f7f584e04fd5"
+          }
+        },
+        {
+          "client_id": "988293723555-9vmvc7aglis8d4thbic57toloh4hniis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhpICTFy4Sd3OgxiQozLIza8a4fN8cxu8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988293723555-5rc0rl9s25e24qm30casskgsclsbj16k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
