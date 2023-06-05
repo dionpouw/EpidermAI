@@ -36,6 +36,9 @@ class RegisterFragment : Fragment() {
             registerButton.setOnClickListener {
                 firebaseRegister(binding)
             }
+            goToLogin.setOnClickListener {
+                findNavController().safeNavigate(RegisterFragmentDirections.actionRegisterFragmentToLoginFragment())
+            }
         }
     }
 
