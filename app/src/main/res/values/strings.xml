@@ -31,4 +31,26 @@
     <string name="disease_section">Disease</string>
     <string name="blog_section">Blog</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="log_out">Log out\n</string>
+    <string name="take_image">Take Image</string>
+    <string name="output">Output:</string>
+    <string name="result_here">Result here</string>
+    <string name="click_on_the_result_text_to_detail_page">Click on the result text to see the detail</string>
+    <string name="gallery">Gallery</string>
+    <string name="image_to_be_detect">image to be detect</string>
+    <string name="select_image">Select Image\n</string>
+    <string name="permission_error">Permission not granted\n</string>
+
+    <string-array name="classes">
+        <item>AcneandRosacea</item>
+        <item>Benignkeratosis</item>
+        <item>Chickenpox</item>
+        <item>Dermatofibroma</item>
+        <item>DistalSubungualOnychomycosis</item>
+        <item>Measles</item>
+        <item>Melanocyticnevus</item>
+        <item>Melanoma</item>
+        <item>Monkeypox</item>
+        <item>Vascularlesion</item>
+    </string-array>
 </resources>
