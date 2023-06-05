@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="8dp"
     android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
     android:layout_marginBottom="8dp"
     android:background="@drawable/round_shape"
     android:elevation="3dp">
@@ -15,7 +15,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/medicine_image"
+            android:id="@+id/card_image"
             android:layout_width="160dp"
             android:layout_height="120dp"
             android:contentDescription="@string/medicine_item"
@@ -26,7 +26,7 @@
             tools:src="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/medicine_name"
+            android:id="@+id/card_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="?attr/colorSecondaryContainer"
@@ -40,9 +40,9 @@
             android:textColor="?attr/colorOnSecondaryContainer"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/medicine_image"
-            app:layout_constraintStart_toStartOf="@id/medicine_image"
-            app:layout_constraintTop_toBottomOf="@id/medicine_image"
+            app:layout_constraintEnd_toEndOf="@id/card_image"
+            app:layout_constraintStart_toStartOf="@id/card_image"
+            app:layout_constraintTop_toBottomOf="@id/card_image"
             tools:text="Amoxsan" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
