@@ -72,7 +72,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="@id/disease_medicine"
         app:layout_constraintTop_toBottomOf="@id/disease_medicine"
-        tools:listitem="@layout/medicine_item" />
+        tools:listitem="@layout/card_item" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
