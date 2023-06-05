@@ -1,9 +1,11 @@
 package com.jeflette.epidermai.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Disease(
-    val id: Int,
-    val name: String,
+    val diseaseItem: CommonItem,
     val description: String,
-    val image: String,
-    val listMedicine: List<Medicine>,
-)
+    val listMedicineItem: List<CommonItem>,
+) : Parcelable
