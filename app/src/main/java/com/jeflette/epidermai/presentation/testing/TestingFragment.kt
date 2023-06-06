@@ -164,7 +164,7 @@ class TestingFragment : Fragment() {
         var maxPos = 0
         var maxConfidence: Float = 0.0F;
 
-        for (i in 0 until confidences.size) {
+        for (i in confidences.indices) {
             if (confidences[i] > maxConfidence) {
                 maxConfidence = confidences[i];
                 maxPos = i;
