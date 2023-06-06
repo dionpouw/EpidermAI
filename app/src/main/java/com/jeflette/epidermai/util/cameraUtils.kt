@@ -23,13 +23,6 @@ val timeStamp: String = SimpleDateFormat(
     FILENAME_FORMAT, Locale.US
 ).format(System.currentTimeMillis())
 
-fun convertDatetime(timestamp: String): String? {
-    val inputDateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.US)
-    val inputDate = inputDateFormat.parse(timestamp)
-    val format = SimpleDateFormat("dd MMMM yyyy", Locale.US)
-    return inputDate?.let { format.format(it) }
-}
-
 fun createCustomTempFile(context: Context): File {
     val storageDir: File? = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
     return File.createTempFile(timeStamp, ".jpg", storageDir)
