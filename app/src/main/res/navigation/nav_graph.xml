@@ -14,11 +14,7 @@
         android:id="@+id/cameraFragment"
         android:name="com.jeflette.epidermai.presentation.camera.CameraFragment"
         android:label="fragment_detection"
-        tools:layout="@layout/fragment_camera">
-        <action
-            android:id="@+id/action_cameraFragment_to_testingFragment"
-            app:destination="@id/testingFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_camera"/>
     <fragment
         android:id="@+id/diseaseFragment"
         android:name="com.jeflette.epidermai.presentation.disease.DiseaseFragment"
@@ -27,15 +23,6 @@
 
         <action
             android:id="@+id/action_diseaseFragment_to_diseaseDetailFragment"
-            app:destination="@id/diseaseDetailFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/diseaseGridFragment"
-        android:name="com.jeflette.epidermai.presentation.diseasedetail.DiseaseGridFragment"
-        android:label="fragment_disease_grid"
-        tools:layout="@layout/fragment_disease_grid">
-        <action
-            android:id="@+id/action_diseaseGridFragment_to_diseaseDetailFragment"
             app:destination="@id/diseaseDetailFragment" />
     </fragment>
     <fragment
@@ -100,12 +87,9 @@
         android:name="com.jeflette.epidermai.presentation.diseasedetail.DiseaseDetailFragment"
         android:label="fragment_disease_detail"
         tools:layout="@layout/fragment_disease_detail">
-        <action
-            android:id="@+id/action_diseaseDetailFragment_to_diseaseGridFragment"
-            app:destination="@id/diseaseGridFragment" />
         <argument
-            android:name="diseaseId"
-            app:argType="integer" />
+            android:name="diseaseName"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/historyFragment"
