@@ -2,12 +2,10 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
     android:layout_marginEnd="8dp"
     android:layout_marginBottom="8dp"
-    android:background="@drawable/round_shape"
     android:elevation="3dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +14,7 @@
 
         <ImageView
             android:id="@+id/disease_image"
-            android:layout_width="160dp"
+            android:layout_width="match_parent"
             android:layout_height="120dp"
             android:contentDescription="@string/disease_image"
             android:scaleType="centerCrop"
@@ -30,7 +28,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="?attr/colorSecondaryContainer"
-            android:fontFamily="@font/jakarta_sans_regular"
+            android:fontFamily="@font/inter_regular"
             android:gravity="center|center_vertical"
             android:lines="2"
             android:maxLines="2"
