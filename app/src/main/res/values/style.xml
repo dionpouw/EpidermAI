@@ -2,7 +2,7 @@
 <resources>
 
     <style name="BottomNavigationViewTextStyle">
-        <item name="android:fontFamily">@font/jakarta_sans_bold</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
     </style>
 
 </resources>
