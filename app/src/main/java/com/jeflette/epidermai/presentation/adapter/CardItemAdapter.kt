@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.jeflette.epidermai.R
 import com.jeflette.epidermai.databinding.CardItemBinding
 import com.jeflette.epidermai.model.CommonItem
 import com.jeflette.epidermai.presentation.home.HomeFragmentDirections
@@ -40,7 +41,7 @@ class CardItemAdapter : RecyclerView.Adapter<CardItemAdapter.ViewHolder>() {
         holder.binding(commonItemList[position])
         holder.itemView.setOnClickListener {
             val actionHomeFragmentToDiseaseDetailFragment =
-                HomeFragmentDirections.actionHomeFragmentToDiseaseDetailFragment(commonItemList[position].id)
+                HomeFragmentDirections.actionHomeFragmentToDiseaseDetailFragment(commonItemList[position].name)
             holder.itemView.findNavController()
                 .navigate(actionHomeFragmentToDiseaseDetailFragment)
         }
