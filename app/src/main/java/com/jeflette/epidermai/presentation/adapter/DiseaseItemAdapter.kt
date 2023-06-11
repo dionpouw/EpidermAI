@@ -40,7 +40,7 @@ class DiseaseItemAdapter : RecyclerView.Adapter<DiseaseItemAdapter.ViewHolder>()
         holder.binding(diseaseList[position])
         holder.itemView.setOnClickListener {
             val actionDiseaseFragmentToDiseaseDetailFragment =
-                DiseaseFragmentDirections.actionDiseaseFragmentToDiseaseDetailFragment(diseaseList[position].diseaseItem.id)
+                DiseaseFragmentDirections.actionDiseaseFragmentToDiseaseDetailFragment(diseaseList[position].diseaseItem.name)
         }
     }
 }
