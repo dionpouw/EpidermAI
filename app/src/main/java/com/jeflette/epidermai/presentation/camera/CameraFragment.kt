@@ -1,6 +1,7 @@
 package com.jeflette.epidermai.presentation.camera
 
 import android.os.Bundle
+import android.util.Size
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +15,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.jeflette.epidermai.R
 import com.jeflette.epidermai.databinding.FragmentCameraBinding
@@ -60,13 +60,18 @@ class CameraFragment : Fragment() {
             object : ImageCapture.OnImageSavedCallback {
                 override fun onError(exc: ImageCaptureException) {
                     Toast.makeText(
-                        context, getString(R.string.error_camera_x), Toast.LENGTH_SHORT
+                        requireContext(),
+                        requireActivity().getString(R.string.error_camera_x),
+                        Toast.LENGTH_SHORT
                     ).show()
                 }
 
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
-                    Toast.makeText(context, getString(R.string.image_saved), Toast.LENGTH_SHORT)
-                        .show()
+                    Toast.makeText(
+                        requireContext(),
+                        requireActivity().getString(R.string.image_saved),
+                        Toast.LENGTH_SHORT
+                    ).show()
                     setFragmentResult(
                         TestingFragment.CAMERA_X_RESULT, bundleOf(
                             "fileResult" to photoFile,
@@ -84,9 +89,9 @@ class CameraFragment : Fragment() {
         cameraProviderFuture.addListener(
             {
                 val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
-                val preview = Preview.Builder().build()
+                val preview = Preview.Builder().setTargetResolution(Size(128, 128)).build()
                     .also { it.setSurfaceProvider(binding?.viewFinder?.surfaceProvider) }
-                imageCapture = ImageCapture.Builder()
+                imageCapture = ImageCapture.Builder().setTargetResolution(Size(128, 128))
                     .setCaptureMode(ImageCapture.CAPTURE_MODE_MINIMIZE_LATENCY).build()
 
                 try {
