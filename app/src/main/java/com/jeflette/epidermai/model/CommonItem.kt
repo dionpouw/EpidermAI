@@ -7,6 +7,6 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class CommonItem(
     val id: Int,
-    @DrawableRes val image: Int,
+    val image: String,
     val name: String,
 ) : Parcelable
