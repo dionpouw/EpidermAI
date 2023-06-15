@@ -59,11 +59,22 @@ class TestingFragment : Fragment() {
                 findNavController().safeNavigate(
                     TestingFragmentDirections.actionTestingFragmentToCameraFragment()
                 )
-
             }
             btnLoadImage.setOnClickListener { startGallery() }
+            tvOutput.setOnClickListener {
+                if (tvOutput.text == "Select picture first") {
+                    Toast.makeText(requireContext(), "Select picture first", Toast.LENGTH_SHORT)
+                        .show()
+                    return@setOnClickListener
+                } else {
+                    findNavController().safeNavigate(
+                        TestingFragmentDirections.actionTestingFragmentToDiseaseDetailFragment(
+                            tvOutput.text.toString()
+                        )
+                    )
+                }
+            }
         }
-
         setFragmentListener()
     }
 
