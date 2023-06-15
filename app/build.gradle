@@ -24,6 +24,10 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file("local.properties").newDataInputStream())
+
+        buildConfigField "String", "BASE_URL", "\"${properties.getProperty("BASE_URL")}\""
     }
 
     buildTypes {
@@ -51,7 +55,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.fragment:fragment-ktx:1.5.7'
+    implementation 'androidx.fragment:fragment-ktx:1.6.0'
 
     // Firebase
     implementation platform('com.google.firebase:firebase-bom:32.1.0')
@@ -60,19 +64,15 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:20.5.0'
 
     // Navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
 
-    // Room
-    implementation 'androidx.room:room-ktx:2.5.1'
-    implementation 'androidx.room:room-runtime:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'org.tensorflow:tensorflow-lite-support:0.4.3'
     implementation 'org.tensorflow:tensorflow-lite-metadata:0.4.3'
     implementation 'org.tensorflow:tensorflow-lite-gpu:2.12.0'
-    kapt 'androidx.room:room-compiler:2.5.1'
 
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.15.1'
@@ -84,18 +84,9 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.9'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
-    // DataStore
-    implementation 'androidx.datastore:datastore-preferences:1.0.0'
-
     // Hilt
     implementation 'com.google.dagger:hilt-android:2.46.1'
     kapt 'com.google.dagger:hilt-compiler:2.46.1'
-
-    // Lottie
-    implementation 'com.airbnb.android:lottie:6.0.0'
-
-    // Viewpager2
-    implementation 'androidx.viewpager2:viewpager2:1.0.0'
 
     // Circle image view
     implementation 'de.hdodenhof:circleimageview:3.1.0'
