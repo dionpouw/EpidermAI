@@ -2,11 +2,14 @@ package com.jeflette.epidermai.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.jeflette.epidermai.R
+import com.jeflette.epidermai.data.local.model.Disease
 import com.jeflette.epidermai.databinding.DiseaseItemBinding
-import com.jeflette.epidermai.model.Disease
 import com.jeflette.epidermai.presentation.disease.DiseaseFragmentDirections
+import com.jeflette.epidermai.util.safeNavigate
 
 class DiseaseItemAdapter : RecyclerView.Adapter<DiseaseItemAdapter.ViewHolder>() {
 
@@ -21,10 +24,9 @@ class DiseaseItemAdapter : RecyclerView.Adapter<DiseaseItemAdapter.ViewHolder>()
     inner class ViewHolder(private val itemBinding: DiseaseItemBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
         fun binding(disease: Disease) {
-            Glide.with(itemView.context).load(disease.diseaseItem.image)
-                .into(itemBinding.diseaseImage)
-            itemBinding.diseaseName.text = disease.diseaseItem.name
-            itemBinding.diseaseDesc.text = disease.description
+            Glide.with(itemView.context).load(disease.dssImg).into(itemBinding.diseaseImage)
+            itemBinding.diseaseName.text = disease.dssName
+            itemBinding.diseaseDesc.text = disease.dssDesc
         }
     }
 
@@ -39,8 +41,17 @@ class DiseaseItemAdapter : RecyclerView.Adapter<DiseaseItemAdapter.ViewHolder>()
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.binding(diseaseList[position])
         holder.itemView.setOnClickListener {
-            val actionDiseaseFragmentToDiseaseDetailFragment =
-                DiseaseFragmentDirections.actionDiseaseFragmentToDiseaseDetailFragment(diseaseList[position].diseaseItem.name)
+            Navigation.findNavController(it).currentDestination?.id.let { id ->
+                when (id) {
+                    R.id.diseaseFragment -> {
+                        Navigation.findNavController(it).safeNavigate(
+                            DiseaseFragmentDirections.actionDiseaseFragmentToDiseaseDetailFragment(
+                                diseaseList[position].dssName
+                            )
+                        )
+                    }
+                }
+            }
         }
     }
 }
